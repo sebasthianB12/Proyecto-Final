@@ -122,6 +122,12 @@ LENGUAJE = {
     ]
 }
 
+datos_cursos = {
+    'inicial': INICIAL,
+    'primaria': PRIMARIA,
+    'secundaria': SECUNDARIA,
+    'lenguaje': LENGUAJE
+}
 
 
 #METODOS:
@@ -141,7 +147,7 @@ def mostrar_cursos(categorias_elegidas, datos_cursos):
 
 
 
-#MUESTRA EN CONSOLA
+#MUESTRA EN CONSOLA:
 
 nombre = input("Ingrese su nombre: ")
 apellido = input("Ingrese su apellido: ")

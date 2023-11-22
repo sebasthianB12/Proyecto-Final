@@ -152,6 +152,82 @@ mostrar_cursos(categorias_elegidas, datos_cursos)
 
 
 
+#
+
+
+
+
+import random
+
+class JuegoPreguntas:
+    def __init__(self, preguntas):
+        self.preguntas_disponibles = preguntas
+        self.preguntas_respondidas = {}
+
+    def realizar_cuestionarios(self, nombre_usuario, num_cuestionarios=5):
+        for cuestionario_numero in range(1, num_cuestionarios + 1):
+            print(f"\nCuestionario {cuestionario_numero}:")
+
+            preguntas_usuario = self.obtener_preguntas_usuario(nombre_usuario)
+
+            for i, pregunta in enumerate(preguntas_usuario, start=1):
+                print(f"\nPregunta {i}/5: {pregunta['pregunta']}")
+                for j, opcion in enumerate(pregunta['opciones'], start=1):
+                    print(f"   {j}. {opcion}")
+
+                respuesta_usuario = self.obtener_respuesta_usuario(nombre_usuario, pregunta)
+                print(f"Respuesta actual: {respuesta_usuario}")
+
+                opcion = input("Seleccione una opción (Enter para dejarla sin cambios, 'c' para cambiar respuesta): ")
+                if opcion.lower() == 'c':
+                    respuesta_usuario = input("Ingrese la nueva respuesta (ingrese el número de la opción): ")
+                    self.guardar_respuesta_usuario(nombre_usuario, pregunta, respuesta_usuario)
+
+            if cuestionario_numero < num_cuestionarios:
+                continuar = input("Presiona Enter para continuar con el siguiente cuestionario...")
+                if not continuar:
+                    continue
+
+        print("Completaste todos los cuestionarios. ¡Bien hecho!")
+
+    def obtener_preguntas_usuario(self, nombre_usuario):
+        preguntas_respondidas_usuario = self.preguntas_respondidas.get(nombre_usuario, set())
+        preguntas_disponibles_usuario = [pregunta for pregunta in self.preguntas_disponibles if pregunta not in preguntas_respondidas_usuario]
+        preguntas_seleccionadas = random.sample(preguntas_disponibles_usuario, min(5, len(preguntas_disponibles_usuario)))
+        return preguntas_seleccionadas
+
+    def obtener_respuesta_usuario(self, nombre_usuario, pregunta):
+        if nombre_usuario not in self.preguntas_respondidas:
+            self.preguntas_respondidas[nombre_usuario] = {}
+
+        if pregunta not in self.preguntas_respondidas[nombre_usuario]:
+            self.preguntas_respondidas[nombre_usuario][pregunta] = ""
+
+        return self.preguntas_respondidas[nombre_usuario][pregunta]
+
+    def guardar_respuesta_usuario(self, nombre_usuario, pregunta, respuesta_usuario):
+        if nombre_usuario not in self.preguntas_respondidas:
+            self.preguntas_respondidas[nombre_usuario] = {}
+
+        self.preguntas_respondidas[nombre_usuario][pregunta] = respuesta_usuario
+
+
+# Crear instancias para cada nivel
+juego_inicial = JuegoPreguntas(preguntas_inicial)
+juego_primaria = JuegoPreguntas(preguntas_primaria)
+juego_secundaria = JuegoPreguntas(preguntas_secundaria)
+
+# Uso del código
+nombre_usuario = input("Ingrese su nombre: ")
+
+print("\nNivel Inicial:")
+juego_inicial.realizar_cuestionarios(nombre_usuario)
+
+print("\nNivel Primaria:")
+juego_primaria.realizar_cuestionarios(nombre_usuario)
+
+print("\nNivel Secundaria:")
+juego_secundaria.realizar_cuestionarios(nombre_usuario)
 
 
 
