@@ -152,86 +152,376 @@ mostrar_cursos(categorias_elegidas, datos_cursos)
 
 
 
-#
+# Nivel Inicial
+preguntas_inicial = [
+    {
+        "pregunta": "¿Cómo se llama la vocales?",
+        "opciones": ["A", "E", "I", "O", "U"],
+        "respuesta_correcta": "A"
+    },
+    {
+        "pregunta": "¿Cuántos dedos tienes en una mano?",
+        "opciones": ["3", "5", "7", "4", "6"],
+        "respuesta_correcta": "5"
+    },
+    {
+        "pregunta": "¿Puedes contar hasta 10?",
+        "opciones": ["Sí", "No", "A veces", "Tal vez", "Nunca"],
+        "respuesta_correcta": "Sí"
+    },
+    {
+        "pregunta": "¿Qué colores puedes identificar?",
+        "opciones": ["Rojo y verde", "Azul y amarillo", "Negro y blanco", "Morado y naranja", "Todos los anteriores"],
+        "respuesta_correcta": "Todos los anteriores"
+    },
+    {
+        "pregunta": "¿Cómo se llama el día después de hoy?",
+        "opciones": ["Ayer", "Hoy", "Mañana", "Pasado mañana", "Próximo día"],
+        "respuesta_correcta": "Pasado mañana"
+    },
+    {
+        "pregunta": "¿Puedes decir tu nombre completo?",
+        "opciones": ["Sí", "No", "Parcialmente", "A veces", "Tal vez"],
+        "respuesta_correcta": "Sí"
+    },
+    {
+        "pregunta": "¿Cuál es tu animal favorito y por qué?",
+        "opciones": ["Perro", "Gato", "Elefante", "Pájaro", "Otro"],
+        "respuesta_correcta": "Otro"
+    },
+    {
+        "pregunta": "¿Cómo se llama tu mamá y tu papá?",
+        "opciones": ["Mamá y papá", "Laura y Juan", "María y Pedro", "Ana y Luis", "Otro"],
+        "respuesta_correcta": "Otro"
+    },
+    {
+        "pregunta": "¿Cuántos dedos y dedos tienes en total?",
+        "opciones": ["10", "15", "20", "25", "30"],
+        "respuesta_correcta": "10"
+    },
+    {
+        "pregunta": "¿Puedes identificar algunas formas geométricas simples?",
+        "opciones": ["Círculo", "Triángulo", "Rectángulo", "Cuadrado", "Todas las anteriores"],
+        "respuesta_correcta": "Todas las anteriores"
+    },
+    {
+        "pregunta": "¿Qué es más grande: un elefante o un ratón?",
+        "opciones": ["Elefante", "Ratón", "Ambos son iguales", "Depende del elefante", "Depende del ratón"],
+        "respuesta_correcta": "Elefante"
+    },
+    {
+        "pregunta": "¿Cómo saludarías a un amigo o amiga?",
+        "opciones": ["Hola", "Adiós", "Buenos días", "Hola, ¿cómo estás?", "Saludos"],
+        "respuesta_correcta": "Hola, ¿cómo estás?"
+    },
+    {
+        "pregunta": "¿Cuál es tu comida favorita y por qué te gusta?",
+        "opciones": ["Pizza", "Hamburguesa", "Ensalada", "Pasta", "Otro"],
+        "respuesta_correcta": "Otro"
+    },
+    {
+        "pregunta": "¿Puedes identificar algunas partes del cuerpo?",
+        "opciones": ["Cabeza", "Pierna", "Brazo", "Oreja", "Todas las anteriores"],
+        "respuesta_correcta": "Todas las anteriores"
+    },
+    {
+        "pregunta": "¿Qué haces para mantener limpio tu espacio?",
+        "opciones": ["Limpiar", "Ordenar", "Recoger", "Todas las anteriores", "Ninguna de las anteriores"],
+        "respuesta_correcta": "Todas las anteriores"
+    },
+    {
+        "pregunta": "¿Cuál es tu juego favorito y por qué te gusta?",
+        "opciones": ["Ajedrez", "Damas", "Videojuegos", "Escondite", "Otro"],
+        "respuesta_correcta": "Otro"
+    },
+    {
+        "pregunta": "¿Puedes decir tu dirección?",
+        "opciones": ["Sí", "No", "Parcialmente", "A veces", "Tal vez"],
+        "respuesta_correcta": "No"
+    },
+    {
+        "pregunta": "¿Qué te gusta hacer cuando hace sol?",
+        "opciones": ["Jugar al aire libre", "Ver televisión", "Leer un libro", "Dormir", "Otro"],
+        "respuesta_correcta": "Jugar al aire libre"
+    },
+    {
+        "pregunta": "¿Puedes identificar algunas emociones?",
+        "opciones": ["Feliz", "Triste", "Enojado", "Asustado", "Todas las anteriores"],
+        "respuesta_correcta": "Todas las anteriores"
+    },
+    {
+        "pregunta": "¿Cuál es tu cuento o personaje favorito?",
+        "opciones": ["Cenicienta", "Peter Pan", "Caperucita Roja", "Harry Potter", "Otro"],
+        "respuesta_correcta": "Otro"
+    }
+]
+# Nivel Primaria
+preguntas_primaria = [
+    {
+        "pregunta": "¿Cuál es la capital de Perú?",
+        "opciones": ["Lima", "Bogotá", "Quito", "Santiago", "La Paz"],
+        "respuesta_correcta": "Lima"
+    },
+    {
+        "pregunta": "¿Qué es un verbo y da un ejemplo?",
+        "opciones": ["Una palabra", "Una acción", "Un lugar", "Un sustantivo", "Un adjetivo"],
+        "respuesta_correcta": "Una acción"
+    },
+    {
+        "pregunta": "¿Cuánto es la suma de 567 + 342?",
+        "opciones": ["789", "909", "809", "889", "909"],
+        "respuesta_correcta": "909"
+    },
+    {
+        "pregunta": "¿Cómo se llama el río más largo del mundo?",
+        "opciones": ["Amazonas", "Nilo", "Mississippi", "Yangtsé", "Danubio"],
+        "respuesta_correcta": "Amazonas"
+    },
+    {
+        "pregunta": "¿Cuántos continentes hay en la Tierra?",
+        "opciones": ["5", "6", "7", "8", "9"],
+        "respuesta_correcta": "7"
+    },
+    {
+        "pregunta": "¿Quién fue el primer presidente del Perú?",
+        "opciones": ["José de la Riva-Agüero", "José de la Mar", "José Bernardo de Tagle", "Simón Bolívar", "Augusto B. Leguía"],
+        "respuesta_correcta": "José de la Riva-Agüero"
+    },
+    {
+        "pregunta": "¿Cuál es la diferencia entre un adjetivo y un adverbio?",
+        "opciones": ["Ambos son iguales", "El adjetivo describe un sustantivo, el adverbio describe un verbo", "El adverbio describe un sustantivo, el adjetivo describe un verbo", "No hay diferencia", "Depende del contexto"],
+        "respuesta_correcta": "El adjetivo describe un sustantivo, el adverbio describe un verbo"
+    },
+    {
+        "pregunta": "¿Cuántos lados tiene un hexágono?",
+        "opciones": ["5", "6", "7", "8", "9"],
+        "respuesta_correcta": "6"
+    },
+    {
+        "pregunta": "¿En qué año se independizó Perú?",
+        "opciones": ["1810", "1821", "1830", "1845", "1850"],
+        "respuesta_correcta": "1821"
+    },
+    {
+        "pregunta": "¿Qué es la fotosíntesis y en qué plantas ocurre?",
+        "opciones": ["Proceso de respiración en animales", "Proceso de conversión de luz en energía en plantas", "Proceso de descomposición de materia orgánica", "Proceso de reproducción en plantas", "Proceso de fermentación en levaduras"],
+        "respuesta_correcta": "Proceso de conversión de luz en energía en plantas"
+    },
+    {
+        "pregunta": "¿Cuál es la fórmula para calcular el área de un triángulo?",
+        "opciones": ["A = l * w", "A = π * r^2", "A = 1/2 * b * h", "A = s^2", "A = 2 * π * r"],
+        "respuesta_correcta": "A = 1/2 * b * h"
+    },
+    {
+        "pregunta": "¿Quién escribió 'La Ciudad y los Perros'?",
+        "opciones": ["Mario Vargas Llosa", "Gabriel García Márquez", "Julio Cortázar", "Isabel Allende", "Carlos Fuentes"],
+        "respuesta_correcta": "Mario Vargas Llosa"
+    },
+    {
+        "pregunta": "¿Cómo se llama el sistema solar en el que vivimos?",
+        "opciones": ["Vía Láctea", "Andrómeda", "Sistema Solar", "Galaxia Espiral", "Galaxia Elíptica"],
+        "respuesta_correcta": "Sistema Solar"
+    },
+    {
+        "pregunta": "¿Cuál es la función del corazón en el cuerpo humano?",
+        "opciones": ["Bombear sangre", "Producir hormonas", "Digestión de alimentos", "Respiración", "Filtrar la sangre"],
+        "respuesta_correcta": "Bombear sangre"
+    },
+    {
+        "pregunta": "¿Quién fue el héroe nacional de la independencia del Perú?",
+        "opciones": ["Simón Bolívar", "José de San Martín", "Túpac Amaru II", "Manco Inca", "Francisco Pizarro"],
+        "respuesta_correcta": "José de San Martín"
+    },
+    {
+        "pregunta": "¿Cuál es la importancia de cuidar el medio ambiente?",
+        "opciones": ["Mejorar la economía", "Preservar la biodiversidad", "Reducir el tráfico", "Aumentar la urbanización", "Desarrollar nuevas tecnologías"],
+        "respuesta_correcta": "Preservar la biodiversidad"
+    },
+    {
+        "pregunta": "¿En qué consiste el ciclo del agua?",
+        "opciones": ["Evaporación, condensación, precipitación", "Respiración, fotosíntesis, transpiración", "Digestión, absorción, excreción", "Conducción, convección, radiación", "Fotosíntesis, respiración, fermentación"],
+        "respuesta_correcta": "Evaporación, condensación, precipitación"
+    },
+    {
+        "pregunta": "¿Cuál es el número romano XVII?",
+        "opciones": ["15", "16", "17", "18", "19"],
+        "respuesta_correcta": "17"
+    },
+    {
+        "pregunta": "¿Cómo se llama la lengua oficial del Perú?",
+        "opciones": ["Español", "Quechua", "Aymara", "Inglés", "Francés"],
+        "respuesta_correcta": "Español"
+    },
+    {
+        "pregunta": "¿Quién fue Túpac Amaru II y qué hizo?",
+        "opciones": ["Conquistador español", "Líder de la rebelión indígena", "Científico peruano", "Presidente de Perú", "Explorador europeo"],
+        "respuesta_correcta": "Líder de la rebelión indígena"
+    }
+]
+
+# Nivel Secundaria
+preguntas_secundaria = [
+    {
+        "pregunta": "¿Cuál es la estructura básica de una célula eucariota?",
+        "opciones": ["Núcleo y membrana celular", "Núcleo y mitocondria", "Membrana celular y cloroplasto", "Mitocondria y cloroplasto", "Núcleo, citoplasma y membrana celular"],
+        "respuesta_correcta": "Núcleo, citoplasma y membrana celular"
+    },
+    {
+        "pregunta": "¿Quién fue Simón Bolívar y cuál fue su papel en la independencia sudamericana?",
+        "opciones": ["Político peruano", "Explorador español", "Libertador sudamericano", "Científico francés", "Rey inglés"],
+        "respuesta_correcta": "Libertador sudamericano"
+    },
+    {
+        "pregunta": "¿Cuál es la importancia de la Revolución Industrial?",
+        "opciones": ["Avance tecnológico", "Desarrollo agrícola", "Auge militar", "Expansión territorial", "Desarrollo cultural"],
+        "respuesta_correcta": "Avance tecnológico"
+    },
+    {
+        "pregunta": "¿En qué consiste la teoría de la relatividad de Einstein?",
+        "opciones": ["Teoría de la gravedad", "Teoría cuántica", "Teoría de la relatividad general", "Teoría electromagnética", "Teoría del caos"],
+        "respuesta_correcta": "Teoría de la relatividad general"
+    },
+    {
+        "pregunta": "¿Cuál es la función de las enzimas en los procesos biológicos?",
+        "opciones": ["Transporte de oxígeno", "Digestión de alimentos", "Producción de energía", "Síntesis de proteínas", "Reproducción celular"],
+        "respuesta_correcta": "Síntesis de proteínas"
+    },
+    {
+        "pregunta": "¿Cómo se lleva a cabo la división celular por mitosis y meiosis?",
+        "opciones": ["Mitosis: división en células idénticas; Meiosis: división en células haploides", "Mitosis: división en células haploides; Meiosis: división en células idénticas", "Mitosis: división en células idénticas; Meiosis: división en células diploides", "Mitosis: división en células diploides; Meiosis: división en células idénticas", "Mitosis y meiosis son procesos idénticos"],
+        "respuesta_correcta": "Mitosis: división en células idénticas; Meiosis: división en células haploides"
+    },
+    {
+        "pregunta": "¿Qué es la globalización y cómo afecta a los países en desarrollo?",
+        "opciones": ["Proceso de interconexión económica, cultural y política; puede tener impactos positivos y negativos en los países en desarrollo", "Proceso de aislamiento económico; solo tiene impactos negativos", "Proceso de descentralización política; solo tiene impactos positivos", "Proceso de desarrollo sostenible; solo tiene impactos positivos", "Proceso de desigualdad social; solo tiene impactos negativos"],
+        "respuesta_correcta": "Proceso de interconexión económica, cultural y política; puede tener impactos positivos y negativos en los países en desarrollo"
+    },
+    {
+        "pregunta": "¿Cuáles son las principales corrientes literarias del siglo XX?",
+        "opciones": ["Realismo y naturalismo", "Modernismo y vanguardismo", "Romanticismo y simbolismo", "Barroco y neoclasicismo", "Edad Media y Renacimiento"],
+        "respuesta_correcta": "Modernismo y vanguardismo"
+    },
+    {
+        "pregunta": "¿Cómo se originó la guerra fría y cuáles fueron sus consecuencias?",
+        "opciones": ["Consecuencia de la Segunda Guerra Mundial; divisiones ideológicas entre Estados Unidos y la Unión Soviética; Carrera armamentística y división de Alemania", "Consecuencia de la Primera Guerra Mundial; competencia económica entre Europa y Asia; Desarrollo de organismos internacionales", "Causada por conflictos territoriales en América Latina; Acuerdos de paz y cooperación internacional", "Consecuencia de la Revolución Rusa; formación de la Liga de Naciones; Descolonización de África", "Causada por conflictos en Asia; desarrollo de tratados de libre comercio"],
+        "respuesta_correcta": "Consecuencia de la Segunda Guerra Mundial; divisiones ideológicas entre Estados Unidos y la Unión Soviética; Carrera armamentística y división de Alemania"
+    },
+    {
+        "pregunta": "¿Qué es la programación orientada a objetos y da un ejemplo de su aplicación?",
+        "opciones": ["Paradigma de programación centrado en procedimientos; ejemplo: programación en ensamblador", "Paradigma de programación basado en el hardware; ejemplo: programación de microcontroladores", "Paradigma de programación centrado en objetos; ejemplo: Java, Python, C++", "Paradigma de programación secuencial; ejemplo: programación en lenguaje máquina", "Paradigma de programación lineal; ejemplo: programación en MATLAB"],
+        "respuesta_correcta": "Paradigma de programación centrado en objetos; ejemplo: Java, Python, C++"
+    },
+    {
+        "pregunta": "¿Cuáles son los derechos humanos y por qué son importantes?",
+        "opciones": ["Principios éticos y morales; no tienen importancia práctica", "Normas sociales; solo aplican a ciertos grupos", "Derechos fundamentales inherentes a todos los seres humanos; garantizan la dignidad y libertad", "Leyes nacionales; varían según el país", "Directrices religiosas; solo aplican a quienes siguen esa religión"],
+        "respuesta_correcta": "Derechos fundamentales inherentes a todos los seres humanos; garantizan la dignidad y libertad"
+    },
+    {
+        "pregunta": "¿En qué consiste la teoría de la evolución de Darwin?",
+        "opciones": ["Cambio gradual de características heredables en las poblaciones a lo largo del tiempo debido a la selección natural", "Creación divina de todas las especies en su forma actual", "Explicación del origen de la vida a través de procesos químicos", "Desarrollo acelerado de nuevas especies en períodos cortos de tiempo", "Evolución dirigida por un ser supremo"],
+        "respuesta_correcta": "Cambio gradual de características heredables en las poblaciones a lo largo del tiempo debido a la selección natural"
+    },
+    {
+        "pregunta": "¿Cuál es el papel de las mitocondrias en la producción de energía celular?",
+        "opciones": ["Almacenar información genética", "Síntesis de proteínas", "Producción de ATP a través de la respiración celular", "Digestión de moléculas", "Transporte de sustancias dentro de la célula"],
+        "respuesta_correcta": "Producción de ATP a través de la respiración celular"
+    },
+    {
+        "pregunta": "¿Qué es la teoría de la oferta y la demanda en economía?",
+        "opciones": ["Teoría que explica cómo se forman los precios en el mercado a través de la interacción entre la oferta y la demanda", "Teoría que establece que la oferta y la demanda son independientes en el mercado", "Teoría que sugiere que la oferta siempre supera a la demanda en cualquier mercado", "Teoría que establece que el precio de un bien o servicio es fijo", "Teoría que ignora la relación entre oferta y demanda en la economía"],
+        "respuesta_correcta": "Teoría que explica cómo se forman los precios en el mercado a través de la interacción entre la oferta y la demanda"
+    },
+    {
+        "pregunta": "¿Cómo se resuelve una ecuación cuadrática?",
+        "opciones": ["Usando la regla de Cramer", "Aplicando la regla de la cadena", "Factorizando o usando la fórmula cuadrática", "Utilizando el método de sustitución", "No es posible resolver ecuaciones cuadráticas"],
+        "respuesta_correcta": "Factorizando o usando la fórmula cuadrática"
+    },
+    {
+        "pregunta": "¿Cuál es la importancia de la democracia en la sociedad actual?",
+        "opciones": ["Mantiene el poder en manos de unos pocos", "Permite el control total del gobierno sobre la población", "Garantiza la participación ciudadana en la toma de decisiones", "Limita las libertades individuales", "Fomenta la desigualdad social"],
+        "respuesta_correcta": "Garantiza la participación ciudadana en la toma de decisiones"
+    },
+    {
+        "pregunta": "¿Qué es la energía renovable y por qué es importante?",
+        "opciones": ["Energía proveniente de fuentes no renovables; no es importante", "Energía que no puede ser utilizada de nuevo; no es importante", "Energía proveniente de fuentes naturales que se regeneran; importante para reducir el impacto ambiental", "Energía proveniente de la quema de combustibles fósiles; importante para la economía", "Energía que no contribuye a la mitigación del cambio climático; no es importante"],
+        "respuesta_correcta": "Energía proveniente de fuentes naturales que se regeneran; importante para reducir el impacto ambiental"
+    },
+    {
+        "pregunta": "¿Cuáles son las principales características del arte renacentista?",
+        "opciones": ["Énfasis en la espiritualidad y lo divino", "Uso de colores oscuros y sombras intensas", "Representación realista de la figura humana y la naturaleza", "Uso de formas geométricas abstractas", "Rechazo a la influencia clásica"],
+        "respuesta_correcta": "Representación realista de la figura humana y la naturaleza"
+    },
+    {
+        "pregunta": "¿Cuál es la función de los neurotransmisores en el sistema nervioso?",
+        "opciones": ["Transportar oxígeno en la sangre", "Transmitir señales eléctricas en el cerebro", "Digestión de alimentos en el sistema nervioso", "Regular la temperatura corporal", "Eliminar desechos metabólicos"],
+        "respuesta_correcta": "Transmitir señales eléctricas en el cerebro"
+    },
+    {
+        "pregunta": "¿Cómo se calcula la velocidad media en física?",
+        "opciones": ["Distancia dividida por el tiempo total", "Tiempo total dividido por la distancia", "Multiplicando la distancia por el tiempo", "Sumando la distancia y el tiempo", "No es posible calcular la velocidad media"],
+        "respuesta_correcta": "Distancia dividida por el tiempo total"
+    }
+]
 
 
 
 
 import random
 
-class JuegoPreguntas:
-    def __init__(self, preguntas):
-        self.preguntas_disponibles = preguntas
-        self.preguntas_respondidas = {}
+def mezclar_opciones(pregunta):
+    pregunta['opciones'] = random.sample(pregunta['opciones'], len(pregunta['opciones']))
+    return pregunta
 
-    def realizar_cuestionarios(self, nombre_usuario, num_cuestionarios=5):
-        for cuestionario_numero in range(1, num_cuestionarios + 1):
-            print(f"\nCuestionario {cuestionario_numero}:")
+def mezclar_preguntas(preguntas):
+    return random.sample(preguntas, len(preguntas))
 
-            preguntas_usuario = self.obtener_preguntas_usuario(nombre_usuario)
+def mostrar_pregunta(pregunta):
+    print(f"\nPregunta {pregunta['id'] + 1}:\n{pregunta['pregunta']}")
+    for i, opcion in enumerate(pregunta['opciones'], start=1):
+        print(f"{chr(96 + i)}.{opcion}")
+    print("x. Siguiente pregunta")
 
-            for i, pregunta in enumerate(preguntas_usuario, start=1):
-                print(f"\nPregunta {i}/5: {pregunta['pregunta']}")
-                for j, opcion in enumerate(pregunta['opciones'], start=1):
-                    print(f"   {j}. {opcion}")
+def realizar_cuestionario(preguntas, nombre_usuario, puntajes):
+    puntaje = puntajes.get(nombre_usuario, 0)
 
-                respuesta_usuario = self.obtener_respuesta_usuario(nombre_usuario, pregunta)
-                print(f"Respuesta actual: {respuesta_usuario}")
+    preguntas = mezclar_preguntas(preguntas)
 
-                opcion = input("Seleccione una opción (Enter para dejarla sin cambios, 'c' para cambiar respuesta): ")
-                if opcion.lower() == 'c':
-                    respuesta_usuario = input("Ingrese la nueva respuesta (ingrese el número de la opción): ")
-                    self.guardar_respuesta_usuario(nombre_usuario, pregunta, respuesta_usuario)
+    for i, pregunta in enumerate(preguntas):
+        if i == 5:
+            break
+        pregunta['id'] = i
+        pregunta = mezclar_opciones(pregunta)
 
-            if cuestionario_numero < num_cuestionarios:
-                continuar = input("Presiona Enter para continuar con el siguiente cuestionario...")
-                if not continuar:
-                    continue
+        while True:  # Bucle que se repite hasta que el usuario proporciona una respuesta válida
+            mostrar_pregunta(pregunta)
 
-        print("Completaste todos los cuestionarios. ¡Bien hecho!")
+            respuesta_usuario = input("Tu respuesta: ").lower()
 
-    def obtener_preguntas_usuario(self, nombre_usuario):
-        preguntas_respondidas_usuario = self.preguntas_respondidas.get(nombre_usuario, set())
-        preguntas_disponibles_usuario = [pregunta for pregunta in self.preguntas_disponibles if pregunta not in preguntas_respondidas_usuario]
-        preguntas_seleccionadas = random.sample(preguntas_disponibles_usuario, min(5, len(preguntas_disponibles_usuario)))
-        return preguntas_seleccionadas
+            if respuesta_usuario == 'x':
+                break
 
-    def obtener_respuesta_usuario(self, nombre_usuario, pregunta):
-        if nombre_usuario not in self.preguntas_respondidas:
-            self.preguntas_respondidas[nombre_usuario] = {}
+            if respuesta_usuario.isalpha() and respuesta_usuario.islower() and ord('a') <= ord(respuesta_usuario) < ord('a') + len(pregunta['opciones']):
+                indice_respuesta = ord(respuesta_usuario) - ord('a')
+                if pregunta['opciones'][indice_respuesta].lower() == pregunta['respuesta_correcta'].lower():
+                    puntaje += 5
+                    print("¡Respuesta correcta!")
+                else:
+                    puntaje -= 5
+                    print(f"Respuesta incorrecta. La respuesta correcta es: {pregunta['respuesta_correcta']}")
+                print(f"Puntos obtenidos: {puntaje}\n")
+                break  # Rompe el bucle cuando el usuario proporciona una respuesta válida
+            else:
+                print("Respuesta no válida. Ingresa solo una letra correspondiente a una opción (a, b, c, ...).\n")
+    
+    puntajes[nombre_usuario] = puntaje
+    print(f"\n¡Cuestionario completado!\nPuntaje total para {nombre_usuario}: {puntaje}")
 
-        if pregunta not in self.preguntas_respondidas[nombre_usuario]:
-            self.preguntas_respondidas[nombre_usuario][pregunta] = ""
-
-        return self.preguntas_respondidas[nombre_usuario][pregunta]
-
-    def guardar_respuesta_usuario(self, nombre_usuario, pregunta, respuesta_usuario):
-        if nombre_usuario not in self.preguntas_respondidas:
-            self.preguntas_respondidas[nombre_usuario] = {}
-
-        self.preguntas_respondidas[nombre_usuario][pregunta] = respuesta_usuario
-
-
-# Crear instancias para cada nivel
-juego_inicial = JuegoPreguntas(preguntas_inicial)
-juego_primaria = JuegoPreguntas(preguntas_primaria)
-juego_secundaria = JuegoPreguntas(preguntas_secundaria)
-
-# Uso del código
-nombre_usuario = input("Ingrese su nombre: ")
-
-print("\nNivel Inicial:")
-juego_inicial.realizar_cuestionarios(nombre_usuario)
-
-print("\nNivel Primaria:")
-juego_primaria.realizar_cuestionarios(nombre_usuario)
-
-print("\nNivel Secundaria:")
-juego_secundaria.realizar_cuestionarios(nombre_usuario)
+# Inicializa el diccionario de puntajes
+puntajes = {}
 
 
 
-
+realizar_cuestionario(preguntas_primaria, "sebasthian", puntajes)
 
 
 
